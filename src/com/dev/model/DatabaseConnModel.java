@@ -34,7 +34,9 @@ public class DatabaseConnModel {
     public String getSQLString() {
         return SQLString;
     }
-
+    public void setLoginAccepted(boolean loginAccepted) {
+        this.loginAccepted = loginAccepted;
+    }
     public boolean isLoginAccepted() {
         return loginAccepted;
     }

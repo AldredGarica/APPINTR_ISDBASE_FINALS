@@ -1,6 +1,6 @@
 package com.dev.controller;
 
-
+import com.dev.model.DatabaseConnModel;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +13,7 @@ import java.sql.SQLException;
 public class PerformDatabaseAction extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        DatabaseConnModel action = new DatabaseConnModel();
         System.out.println("HELLO WORLD");
     }
 }
