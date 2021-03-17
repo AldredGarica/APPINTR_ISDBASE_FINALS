@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="MachineApplication1.2:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war</output-path>
+    <root id="archive" name="MachineApplication1.2_war.war">
+      <element id="artifact" artifact-name="MachineApplication:war exploded" />
+    </root>
+  </artifact>
+</component>
