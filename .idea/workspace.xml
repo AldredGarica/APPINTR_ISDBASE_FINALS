@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MachineApplication:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="Fix refactor naming error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/controller/action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/controller/action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/view/errorDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/errorLoginDisplay.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1RRLAb0LoTTSYAeUuYMuNfTuKrO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15429688" />
+    <property name="project.structure.side.proportion" value="0.37816092" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mysql-connector-java-8.0.23.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.23.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.4" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="MachineApplication:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/MachineApplication_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_26_MachineApplication_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53319" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MachineApplication:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.mysql-connector-java-8.0.23.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="" />
+      <created>1569624818241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569624818241</updated>
+      <workItem from="1569624822472" duration="1084000" />
+      <workItem from="1569654382945" duration="2850000" />
+      <workItem from="1615888131958" duration="9031000" />
+      <workItem from="1615910531015" duration="198000" />
+      <workItem from="1615911335296" duration="5439000" />
+      <workItem from="1615919324118" duration="2644000" />
+      <workItem from="1615948787987" duration="13161000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Push">
+      <created>1615954418750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615954418750</updated>
+    </task>
+    <task id="LOCAL-00002" summary="PerformDatabaseModel Initiate Connection to Database">
+      <created>1615955039063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615955039063</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Display.java Remove Field Validation">
+      <created>1615959010900</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615959010900</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add .gitignore">
+      <created>1615961886472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615961886473</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Renamed Model to LoginModel">
+      <created>1615964642582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615964642582</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Renamed Action to LoginAction">
+      <created>1615964937016</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1615964937016</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Renamed Action to LoginAction pt2">
+      <created>1615965091518</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615965091518</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix refactor naming error">
+      <created>1615966082267</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615966082267</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Push" />
+    <MESSAGE value="PerformDatabaseModel Initiate Connection to Database" />
+    <MESSAGE value="Display.java Remove Field Validation" />
+    <MESSAGE value="Add .gitignore" />
+    <MESSAGE value="Renamed Model to LoginModel" />
+    <MESSAGE value="Renamed Action to LoginAction" />
+    <MESSAGE value="Renamed Action to LoginAction pt2" />
+    <MESSAGE value="Fix refactor naming error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix refactor naming error" />
+  </component>
+</project>
