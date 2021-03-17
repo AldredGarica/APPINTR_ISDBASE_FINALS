@@ -4,6 +4,7 @@
 bin/
 tmp/
 out/
+.idea/
 *.tmp
 *.bak
 *.swp
