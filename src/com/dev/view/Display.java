@@ -35,7 +35,7 @@ public class Display extends HttpServlet {
                     "" +
                     "<div class=\"container-login100\" style=\"background-image: url('images/bg-01.jpg');\">" +
                     "    <div class=\"wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30\">" +
-                    "        <form method=\"post\" class=\"login100-form\" action=\"process.PerformDatabaseAction\">" +
+                    "        <form method=\"post\" class=\"login100-form\" action=\"process.PerformAddorRemoveAction\">" +
                     "            <span class=\"login100-form-title p-b-37\">ADD GUITAR</span>" +
                     "            <div class=\"container-login100-form-btn\">" +
                     "" +
@@ -53,7 +53,7 @@ public class Display extends HttpServlet {
                     "                </button>" +
                     "            </div>" +
                     "<hr>" +
-                    "        </form><form method=\"post\" class=\"login100-form\" action=\"process.PerformDatabaseAction\">" +
+                    "        </form><form method=\"post\" class=\"login100-form\" action=\"process.PerformAddorRemoveAction\">" +
                     "            <span class=\"login100-form-title p-b-37\">REMOVE GUITAR</span>" +
                     "            <div class=\"container-login100-form-btn\">" +
                     "" +

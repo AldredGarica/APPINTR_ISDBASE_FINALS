@@ -30,11 +30,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PerformDatabaseAction</servlet-name>
-        <servlet-class>com.dev.controller.PerformDatabaseAction</servlet-class>
+        <servlet-name>PerformAddorRemoveAction</servlet-name>
+        <servlet-class>com.dev.controller.PerformAddorRemoveAction</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PerformDatabaseAction</servlet-name>
-        <url-pattern>/process.PerformDatabaseAction</url-pattern>
+        <servlet-name>PerformAddorRemoveAction</servlet-name>
+        <url-pattern>/process.PerformAddorRemoveAction</url-pattern>
     </servlet-mapping>
 </web-app>

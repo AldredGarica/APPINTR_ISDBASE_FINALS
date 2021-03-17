@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class PerformDatabaseAction extends HttpServlet {
+public class PerformAddorRemoveAction extends HttpServlet {
     private String gName;
     private float gPrice;
 
