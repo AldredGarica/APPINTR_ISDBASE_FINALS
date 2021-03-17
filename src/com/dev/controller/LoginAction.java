@@ -33,7 +33,7 @@ public class LoginAction extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("display.html");
             dispatcher.forward(request, response);
         }else{
-            response.sendRedirect("error.html");
+            response.sendRedirect("error.jsp");
         }
     }
 
