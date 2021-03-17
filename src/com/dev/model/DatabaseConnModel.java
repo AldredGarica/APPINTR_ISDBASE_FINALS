@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class DatabaseConnModel {
 
-    //SQL Connection
+    /**SQL Connection (REMOTE)**/
     private String dbms = "mysql";
     private Object userName = "newuser";
     private String serverName = "0.tcp.ap.ngrok.io";
