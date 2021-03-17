@@ -6,22 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="Fix refactor naming error">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/controller/action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/controller/action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/view/errorDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/errorLoginDisplay.java" afterDir="false" />
-    </list>
+    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +72,7 @@
       <recent name="$PROJECT_DIR$/web/WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.4">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -105,7 +90,7 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.23.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.4" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 10.0.4" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.4" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="MachineApplication:war exploded">
           <settings>
@@ -191,6 +176,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JAR Application.mysql-connector-java-8.0.23.jar" />
+      <item itemvalue="Tomcat Server.Tomcat 10.0.4" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JAR Application.mysql-connector-java-8.0.23.jar" />
@@ -272,11 +261,43 @@
       <option name="project" value="LOCAL" />
       <updated>1615966082267</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Revert &quot;Remove workspace.xml&quot;&#10;&#10;This reverts commit 8e29c83a">
+      <created>1615968270533</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1615968270533</updated>
+    </task>
+    <task id="LOCAL-00010" summary="index.html: Change input type from text to password">
+      <created>1615968337790</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615968337790</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Push" />
@@ -287,6 +308,8 @@
     <MESSAGE value="Renamed Action to LoginAction" />
     <MESSAGE value="Renamed Action to LoginAction pt2" />
     <MESSAGE value="Fix refactor naming error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix refactor naming error" />
+    <MESSAGE value="Revert &quot;Remove workspace.xml&quot;&#10;&#10;This reverts commit 8e29c83a" />
+    <MESSAGE value="index.html: Change input type from text to password" />
+    <option name="LAST_COMMIT_MESSAGE" value="index.html: Change input type from text to password" />
   </component>
 </project>
