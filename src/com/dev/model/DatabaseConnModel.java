@@ -62,7 +62,7 @@ public class DatabaseConnModel {
 
         String SQLQuery = getSQLString();
 
-        if(getSQLString().equals("SELECT * FROM finals.users WHERE loginid = ? and password = ?")) {
+        if(getSQLString().equals("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?")) {
             PreparedStatement stmt = conn.prepareStatement(SQLQuery);
             stmt.setString(1, usernamex);
             stmt.setString(2, passwordx);
@@ -70,7 +70,7 @@ public class DatabaseConnModel {
             if (result.next()) {
                 System.out.println("Username(ColumnIndex#2): " + result.getString(2));
                 System.out.println("Password(ColumnIndex#3): " + result.getString(3));
-                loginAccepted = true;
+                setLoginAccepted(true);
             } else {
                 System.out.println("Incorrect Username / Password");
             }
@@ -80,7 +80,7 @@ public class DatabaseConnModel {
     }
 
     public void CheckLogin(){
-        setSQLString("SELECT * FROM finals.users WHERE loginid = ? and password = ?");
+        setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
     }
 
 
