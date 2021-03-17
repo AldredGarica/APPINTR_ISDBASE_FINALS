@@ -12,16 +12,16 @@ import java.sql.SQLException;
 
 
 public class LoginAction extends HttpServlet {
-    private String usernamex;
-    private String passwordx;
+    private String username;
+    private String password;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        usernamex = request.getParameter("username");
-        passwordx = request.getParameter("password");
+        username = request.getParameter("username");
+        password = request.getParameter("password");
         DatabaseConnModel action = new DatabaseConnModel();
 
-        action.setUsernamex(usernamex);
-        action.setPasswordx(passwordx);
+        action.setUsernamex(username);
+        action.setPasswordx(password);
         try {
             action.CheckLogin();
             action.SQLConn();

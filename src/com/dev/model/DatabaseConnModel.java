@@ -21,16 +21,16 @@ public class DatabaseConnModel {
     private String passwordx;
     private boolean loginAccepted = false;
     //Add Guitar
-    private String gNamex;
-    private float gPricex;
+    private String gName;
+    private float gPrice;
 
     //Mutator Method
 
     public void setgNamex(String gNamex) {
-        this.gNamex = gNamex;
+        this.gName = gNamex;
     }
     public void setgPricex(float gPricex) {
-        this.gPricex = gPricex;
+        this.gPrice = gPricex;
     }
 
     public void setPasswordx(String passwordx) {
@@ -87,8 +87,8 @@ public class DatabaseConnModel {
             }
         }else if(getSQLString().equals("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)")){
             PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-            stmtx.setString(1, gNamex);
-            stmtx.setString(2, String.valueOf(gPricex));
+            stmtx.setString(1, gName);
+            stmtx.setString(2, String.valueOf(gPrice));
             int result = stmtx.executeUpdate();
             if (result > 0)
                 System.out.println("Add Guitar Success!");
