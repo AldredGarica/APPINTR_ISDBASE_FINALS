@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class action extends HttpServlet {
+public class LoginAction extends HttpServlet {
     private String usernamex;
     private String passwordx;
 

@@ -33,7 +33,7 @@ public class errorDisplay extends HttpServlet {
 
         out.print("<div class=\"container-login100\" style=\"background-image: url('images/bg-01.jpg');\">");
         out.print("<div class=\"wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30\">");
-        out.print("<form class=\"login100-form validate-form\" action=\"index.html\">");
+        out.print("<form class=\"login100-form validate-form\" LoginAction=\"index.html\">");
         out.print("<span class=\"login100-form-title p-b-37\">Error Page</span>");
         out.print("<center><font size=\"+1.8\"><p>Undentified Error..</font></p></center>");
         out.print("<div class=\"container-login100-form-btn\">");
