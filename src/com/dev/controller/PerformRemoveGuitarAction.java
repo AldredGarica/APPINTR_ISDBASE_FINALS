@@ -24,7 +24,10 @@ public class PerformRemoveGuitarAction extends HttpServlet {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            resp.sendRedirect("remove-guitar.jsp");
+            req.setAttribute("d24mcx432", action);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("remove-guitar.jsp");
+            dispatcher.forward(req, resp);
+            //resp.sendRedirect("remove-guitar.jsp");
         } else {
             resp.sendRedirect("error.jsp");
         }

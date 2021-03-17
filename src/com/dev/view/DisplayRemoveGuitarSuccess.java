@@ -1,5 +1,6 @@
 package com.dev.view;
 
+import com.dev.model.DatabaseConnModel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,12 +12,14 @@ import java.io.PrintWriter;
 
 @WebServlet("/remove-guitar.jsp")
 public class DisplayRemoveGuitarSuccess extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-
-        String myvar = "<html lang=\"en\"><head>"+
+        DatabaseConnModel action = (DatabaseConnModel)request.getAttribute("d24mcx432");
+        String MoreInfo = action.getrGuitarInfo();
+        System.out.println(MoreInfo);
+                String myvar = "<html lang=\"en\"><head>"+
                 "	<title>Login V9</title>"+
                 "	<meta charset=\"UTF-8\">"+
                 "	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"+
@@ -40,8 +43,7 @@ public class DisplayRemoveGuitarSuccess extends HttpServlet {
                 "			<form class=\"login100-form\">"+
                 "				<span class=\"login100-form-title p-b-37\">"+
                 "					Remove Guitar Info"+
-                "				</span>"+
-                "				<b><p>Guitar removed Successfully, Click the Return Button.</p></b>"+
+                "				</span>"+ MoreInfo +
                 "				<div class=\"container-login100-form-btn\">"+
                 "					<button class=\"login100-form-btn\" onclick=\"goBack()\">"+
                 "						Return"+

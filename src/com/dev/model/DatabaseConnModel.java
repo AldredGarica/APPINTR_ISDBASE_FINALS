@@ -25,8 +25,18 @@ public class DatabaseConnModel {
     private String gPrice;
     //Remove Guitar
     private String rGuitar;
-
+    //Show Additional Error
+    private String rGuitarInfo = "";
     //Mutator Method
+
+
+    public void setrGuitarInfo(String rGuitarInfo) {
+        this.rGuitarInfo = rGuitarInfo;
+    }
+
+    public String getrGuitarInfo() {
+        return rGuitarInfo;
+    }
 
     public void setgNamex(String gNamex) {
         this.gName = gNamex;
@@ -58,6 +68,7 @@ public class DatabaseConnModel {
     public boolean isLoginAccepted() {
         return loginAccepted;
     }
+
 
     //Init
     public DatabaseConnModel(){
@@ -108,7 +119,9 @@ public class DatabaseConnModel {
             int result = stmtx.executeUpdate();
             if (result > 0) {
                 System.out.println("Guitar " + rGuitar + " have been deleted.");
+                setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have been deleted, Click the Return Button.</b></p>");
             }else {
+                setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
                 System.out.println("Error Occurred");
             }
         }
