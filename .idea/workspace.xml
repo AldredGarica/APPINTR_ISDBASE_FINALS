@@ -6,9 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="Initial Push">
+    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="PerformDatabaseModel Initiate Connection to Database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +206,7 @@
       <workItem from="1615910531015" duration="198000" />
       <workItem from="1615911335296" duration="5439000" />
       <workItem from="1615919324118" duration="2644000" />
-      <workItem from="1615948787987" duration="6072000" />
+      <workItem from="1615948787987" duration="8382000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
@@ -210,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615954418750</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PerformDatabaseModel Initiate Connection to Database">
+      <created>1615955039063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615955039063</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +230,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Push" />
+    <MESSAGE value="PerformDatabaseModel Initiate Connection to Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="PerformDatabaseModel Initiate Connection to Database" />
   </component>
 </project>
