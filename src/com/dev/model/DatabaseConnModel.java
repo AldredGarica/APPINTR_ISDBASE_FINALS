@@ -20,8 +20,19 @@ public class DatabaseConnModel {
     private String usernamex;
     private String passwordx;
     private boolean loginAccepted = false;
+    //Add Guitar
+    private String gNamex;
+    private float gPricex;
 
     //Mutator Method
+
+    public void setgNamex(String gNamex) {
+        this.gNamex = gNamex;
+    }
+    public void setgPricex(float gPricex) {
+        this.gPricex = gPricex;
+    }
+
     public void setPasswordx(String passwordx) {
         this.passwordx = passwordx;
     }
@@ -74,6 +85,15 @@ public class DatabaseConnModel {
             } else {
                 System.out.println("Incorrect Username / Password");
             }
+        }else if(getSQLString().equals("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)")){
+            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+            stmtx.setString(1, gNamex);
+            stmtx.setString(2, String.valueOf(gPricex));
+            int result = stmtx.executeUpdate();
+            if (result > 0)
+                System.out.println("Add Guitar Success!");
+            else
+                System.out.println("Add Guitar Failed!");
         }
 
         return conn;
@@ -81,6 +101,9 @@ public class DatabaseConnModel {
 
     public void CheckLogin(){
         setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
+    }
+    public void AddGuitar(){
+        setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
     }
 
 
