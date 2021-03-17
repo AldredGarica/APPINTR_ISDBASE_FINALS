@@ -56,8 +56,8 @@ public class LoginModel {
         stmt.setString(2, passwordx);
         ResultSet result = stmt.executeQuery();
         if(result.next()){
-            System.out.println("USERNAME: " + result.getString(2));
-            System.out.println("PASSWORD: " + result.getString(3));
+            System.out.println("Username(ColumnIndex#2): " + result.getString(2));
+            System.out.println("Password(ColumnIndex#3): " + result.getString(3));
             loginAccepted = true;
         }else{
             System.out.println("Incorrect Username / Password");
