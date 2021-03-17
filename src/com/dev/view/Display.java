@@ -44,7 +44,7 @@ public class Display extends HttpServlet {
                     "                    <span class=\"focus-input100\"></span>" +
                     "                </div>" +
                     "                <div class=\"wrap-input100 validate-input m-b-20\" data-validate=\"Enter Guitar Price\">" +
-                    "                    <input class=\"input100\" type=\"text\" placeholder=\"Guitar Price\" name=\"gPrice\">" +
+                    "                    <input class=\"input100\" type=\"number\" placeholder=\"Guitar Price\" name=\"gPrice\">" +
                     "                    <span class=\"focus-input100\"></span>" +
                     "                </div>" +
                     "" +
