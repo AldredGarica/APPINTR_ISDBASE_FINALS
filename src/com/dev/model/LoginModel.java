@@ -5,7 +5,7 @@ import java.util.Properties;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-public class model{
+public class LoginModel {
 
     //SQL LOGIN
     private String dbms = "mysql";
@@ -32,7 +32,7 @@ public class model{
         return loginAccepted;
     }
 
-    public model(){
+    public LoginModel(){
     }
 
     public Connection getConnection() throws SQLException {

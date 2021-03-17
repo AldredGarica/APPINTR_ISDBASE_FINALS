@@ -1,23 +1,18 @@
 package com.dev.view;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
-import com.dev.model.model;
+import com.dev.model.LoginModel;
 
 public class Display extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        model action = (model)request.getAttribute("d24mcx432");
-
-
+        LoginModel action = (LoginModel)request.getAttribute("d24mcx432");
 
         String myvar = "<html lang=\"en\"><head>"+
                 "    <title>APPINTR</title>"+

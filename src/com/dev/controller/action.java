@@ -1,6 +1,6 @@
 package com.dev.controller;
 
-import com.dev.model.model;
+import com.dev.model.LoginModel;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -18,7 +18,7 @@ public class action extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         usernamex = request.getParameter("username");
         passwordx = request.getParameter("password");
-        model action = new model();
+        LoginModel action = new LoginModel();
 
         action.setUsernamex(usernamex);
         action.setPasswordx(passwordx);
