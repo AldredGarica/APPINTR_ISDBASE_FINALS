@@ -27,6 +27,7 @@ public class PerformDatabaseAction extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        resp.sendRedirect("success-guitar.jsp");
         System.out.println("HELLO WORLD");
     }
 }
