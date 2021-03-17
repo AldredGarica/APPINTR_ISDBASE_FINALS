@@ -22,7 +22,7 @@
 
     <servlet>
         <servlet-name>action</servlet-name>
-        <servlet-class>com.dev.controller.action</servlet-class>
+        <servlet-class>com.dev.controller.LoginAction</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
