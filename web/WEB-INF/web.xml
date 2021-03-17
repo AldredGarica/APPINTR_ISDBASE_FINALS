@@ -37,4 +37,13 @@
         <servlet-name>PerformAddorRemoveAction</servlet-name>
         <url-pattern>/process.PerformAddorRemoveAction</url-pattern>
     </servlet-mapping>
+
+     <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.dev.controller.RegisterAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/RegisterACtion</url-pattern>
+    </servlet-mapping>
 </web-app>
