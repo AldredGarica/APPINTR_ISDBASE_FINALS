@@ -8,7 +8,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 @WebServlet("/error.html")
-public class errorDisplay extends HttpServlet {
+public class errorLoginDisplay extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //set the MIME type response
         response.setContentType("text/html");
@@ -35,7 +35,7 @@ public class errorDisplay extends HttpServlet {
         out.print("<div class=\"wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30\">");
         out.print("<form class=\"login100-form validate-form\" action=\"index.html\">");
         out.print("<span class=\"login100-form-title p-b-37\">Error Page</span>");
-        out.print("<center><font size=\"+1.8\"><p>Undentified Error..</font></p></center>");
+        out.print("<center><font size=\"+1.8\"><p>Incorrect Login Combination</font></p></center>");
         out.print("<div class=\"container-login100-form-btn\">");
         out.print("<button class=\"login100-form-btn\">");
         out.print("Return");

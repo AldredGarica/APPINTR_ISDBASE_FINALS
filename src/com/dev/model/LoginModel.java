@@ -7,35 +7,35 @@ import java.io.IOException;
 
 public class LoginModel {
 
-    //SQL LOGIN
+    //SQL Connection
     private String dbms = "mysql";
     private Object userName = "newuser";
     private String serverName = "0.tcp.ap.ngrok.io";
     private int portNumber = 15057;
     private String dbName = "finals";
     private String password = "password";
-    //OTHERS
+
+    //Username, Password and Boolean
     private String usernamex;
     private String passwordx;
     private boolean loginAccepted = false;
 
-    //GETTERS AND SETTERS
+    //Mutator Method
     public void setPasswordx(String passwordx) {
         this.passwordx = passwordx;
     }
-
     public void setUsernamex(String usernamex) {
         this.usernamex = usernamex;
     }
-
     public boolean isLoginAccepted() {
         return loginAccepted;
     }
 
+    //Init
     public LoginModel(){
     }
 
-    public Connection getConnection() throws SQLException {
+    public Connection getAccess() throws SQLException {
 
         Connection conn = null;
         Properties connectionProps = new Properties();
@@ -49,7 +49,6 @@ public class LoginModel {
                             ":" + this.portNumber + "/",
                     connectionProps);
         }
-        System.out.println("Connected to database");
 
         String CheckLogin = "SELECT * FROM finals.users WHERE loginid = ? and password = ?";
         PreparedStatement stmt = conn.prepareStatement(CheckLogin);
@@ -61,7 +60,7 @@ public class LoginModel {
             System.out.println("PASSWORD: " + result.getString(3));
             loginAccepted = true;
         }else{
-            System.out.println("INCORRECT USERNAME / PASSWORD");
+            System.out.println("Incorrect Username / Password");
         }
 
         return conn;

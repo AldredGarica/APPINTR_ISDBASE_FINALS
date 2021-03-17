@@ -6,20 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="Renamed Action to LoginAction pt2">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="Fix refactor naming error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication1_2_war/MachineApplication1.2_war.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/controller/action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/Display.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/errorDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/view/errorDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/classes/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MachineApplication_war_exploded/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/controller/action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformDatabaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformDatabaseAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/model/PerformDatabaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MachineApplication/com/dev/view/errorDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/PerformDatabaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/view/errorDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/errorLoginDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -212,7 +214,7 @@
       <workItem from="1615910531015" duration="198000" />
       <workItem from="1615911335296" duration="5439000" />
       <workItem from="1615919324118" duration="2644000" />
-      <workItem from="1615948787987" duration="12346000" />
+      <workItem from="1615948787987" duration="13161000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
@@ -263,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615965091518</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix refactor naming error">
+      <created>1615966082267</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615966082267</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +286,7 @@
     <MESSAGE value="Renamed Model to LoginModel" />
     <MESSAGE value="Renamed Action to LoginAction" />
     <MESSAGE value="Renamed Action to LoginAction pt2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed Action to LoginAction pt2" />
+    <MESSAGE value="Fix refactor naming error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix refactor naming error" />
   </component>
 </project>

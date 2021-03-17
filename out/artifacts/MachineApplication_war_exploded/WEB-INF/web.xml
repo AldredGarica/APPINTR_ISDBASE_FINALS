@@ -21,12 +21,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>action</servlet-name>
+        <servlet-name>LoginAction</servlet-name>
         <servlet-class>com.dev.controller.LoginAction</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>action</servlet-name>
-        <url-pattern>/process.action</url-pattern>
+        <servlet-name>LoginAction</servlet-name>
+        <url-pattern>/process.LoginAction</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -23,7 +23,7 @@ public class LoginAction extends HttpServlet {
         action.setUsernamex(usernamex);
         action.setPasswordx(passwordx);
         try {
-            action.getConnection();
+            action.getAccess();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
