@@ -30,11 +30,20 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PerformAddorRemoveAction</servlet-name>
-        <servlet-class>com.dev.controller.PerformAddorRemoveAction</servlet-class>
+        <servlet-name>PerformAddGuitarAction</servlet-name>
+        <servlet-class>com.dev.controller.PerformAddGuitarAction</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PerformAddorRemoveAction</servlet-name>
-        <url-pattern>/process.PerformAddorRemoveAction</url-pattern>
+        <servlet-name>PerformAddGuitarAction</servlet-name>
+        <url-pattern>/process.PerformAddGuitarAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PerformRemoveGuitarAction</servlet-name>
+        <servlet-class>com.dev.controller.PerformRemoveGuitarAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PerformRemoveGuitarAction</servlet-name>
+        <url-pattern>/process.PerformRemoveGuitarAction</url-pattern>
     </servlet-mapping>
 </web-app>

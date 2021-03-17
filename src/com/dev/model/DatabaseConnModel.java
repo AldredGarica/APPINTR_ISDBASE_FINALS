@@ -22,17 +22,24 @@ public class DatabaseConnModel {
     private boolean loginAccepted = false;
     //Add Guitar
     private String gName;
-    private float gPrice;
+    private String gPrice;
+    //Remove Guitar
+    private String rGuitar;
 
     //Mutator Method
 
     public void setgNamex(String gNamex) {
         this.gName = gNamex;
     }
-    public void setgPricex(float gPricex) {
-        this.gPrice = gPricex;
+    public void setgPrice(String gPrice) {
+        this.gPrice = gPrice;
     }
-
+    public void setrGuitar(String rGuitar) {
+        this.rGuitar = rGuitar;
+    }
+    public String getrGuitar() {
+        return rGuitar;
+    }
     public void setPasswordx(String passwordx) {
         this.passwordx = passwordx;
     }
@@ -88,14 +95,23 @@ public class DatabaseConnModel {
         }else if(getSQLString().equals("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)")){
             PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
             stmtx.setString(1, gName);
-            stmtx.setString(2, String.valueOf(gPrice));
+            stmtx.setString(2, gPrice);
             int result = stmtx.executeUpdate();
-            if (result > 0)
+            if (result > 0) {
                 System.out.println("Add Guitar Success!");
-            else
+            }else {
                 System.out.println("Add Guitar Failed!");
+            }
+        }else if(getSQLString().equals("DELETE from finals.guitars WHERE gName = ?")){
+            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+            stmtx.setString(1, rGuitar);
+            int result = stmtx.executeUpdate();
+            if (result > 0) {
+                System.out.println("Guitar " + rGuitar + " have been deleted.");
+            }else {
+                System.out.println("Error Occurred");
+            }
         }
-
         return conn;
     }
 
@@ -104,6 +120,10 @@ public class DatabaseConnModel {
     }
     public void AddGuitar(){
         setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
+    }
+
+    public void RemoveGuitar(){
+        setSQLString("DELETE from finals.guitars WHERE gName = ?");
     }
 
 
