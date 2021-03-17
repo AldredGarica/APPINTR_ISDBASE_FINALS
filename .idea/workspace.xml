@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error" />
+    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +19,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -275,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615968337790</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="workspace.xml: Tomcat 10.0.2">
+      <created>1615968387496</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615968387496</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Swtich from HTML to JSP">
+      <created>1615970057144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615970057144</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +327,8 @@
     <MESSAGE value="Fix refactor naming error" />
     <MESSAGE value="Revert &quot;Remove workspace.xml&quot;&#10;&#10;This reverts commit 8e29c83a" />
     <MESSAGE value="index.html: Change input type from text to password" />
-    <option name="LAST_COMMIT_MESSAGE" value="index.html: Change input type from text to password" />
+    <MESSAGE value="workspace.xml: Tomcat 10.0.2" />
+    <MESSAGE value="Swtich from HTML to JSP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swtich from HTML to JSP" />
   </component>
 </project>
