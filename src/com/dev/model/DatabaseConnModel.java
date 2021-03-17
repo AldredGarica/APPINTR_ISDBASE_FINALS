@@ -5,7 +5,7 @@ import java.util.Properties;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-public class LoginModel {
+public class DatabaseConnModel {
 
     //SQL Connection
     private String dbms = "mysql";
@@ -14,6 +14,7 @@ public class LoginModel {
     private int portNumber = 15057;
     private String dbName = "finals";
     private String password = "password";
+    private String SQLString = "";
 
     //Username, Password and Boolean
     private String usernamex;
@@ -27,15 +28,22 @@ public class LoginModel {
     public void setUsernamex(String usernamex) {
         this.usernamex = usernamex;
     }
+    public void setSQLString(String SQLString) {
+        this.SQLString = SQLString;
+    }
+    public String getSQLString() {
+        return SQLString;
+    }
+
     public boolean isLoginAccepted() {
         return loginAccepted;
     }
 
     //Init
-    public LoginModel(){
+    public DatabaseConnModel(){
     }
 
-    public Connection getAccess() throws SQLException {
+    public Connection SQLConn() throws SQLException {
 
         Connection conn = null;
         Properties connectionProps = new Properties();
@@ -50,20 +58,27 @@ public class LoginModel {
                     connectionProps);
         }
 
-        String CheckLogin = "SELECT * FROM finals.users WHERE loginid = ? and password = ?";
-        PreparedStatement stmt = conn.prepareStatement(CheckLogin);
-        stmt.setString(1, usernamex);
-        stmt.setString(2, passwordx);
-        ResultSet result = stmt.executeQuery();
-        if(result.next()){
-            System.out.println("Username(ColumnIndex#2): " + result.getString(2));
-            System.out.println("Password(ColumnIndex#3): " + result.getString(3));
-            loginAccepted = true;
-        }else{
-            System.out.println("Incorrect Username / Password");
+        String SQLQuery = getSQLString();
+
+        if(getSQLString().equals("SELECT * FROM finals.users WHERE loginid = ? and password = ?")) {
+            PreparedStatement stmt = conn.prepareStatement(SQLQuery);
+            stmt.setString(1, usernamex);
+            stmt.setString(2, passwordx);
+            ResultSet result = stmt.executeQuery();
+            if (result.next()) {
+                System.out.println("Username(ColumnIndex#2): " + result.getString(2));
+                System.out.println("Password(ColumnIndex#3): " + result.getString(3));
+                loginAccepted = true;
+            } else {
+                System.out.println("Incorrect Username / Password");
+            }
         }
 
         return conn;
+    }
+
+    public void CheckLogin(){
+        setSQLString("SELECT * FROM finals.users WHERE loginid = ? and password = ?");
     }
 
 

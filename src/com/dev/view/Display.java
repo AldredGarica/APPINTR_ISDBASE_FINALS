@@ -5,14 +5,14 @@ import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
-import com.dev.model.LoginModel;
+import com.dev.model.DatabaseConnModel;
 
 public class Display extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        LoginModel action = (LoginModel)request.getAttribute("d24mcx432");
+        DatabaseConnModel action = (DatabaseConnModel)request.getAttribute("d24mcx432");
 
         String myvar = "<html lang=\"en\"><head>"+
                 "    <title>APPINTR</title>"+

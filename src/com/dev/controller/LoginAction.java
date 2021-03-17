@@ -1,6 +1,6 @@
 package com.dev.controller;
 
-import com.dev.model.LoginModel;
+import com.dev.model.DatabaseConnModel;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -18,12 +18,13 @@ public class LoginAction extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         usernamex = request.getParameter("username");
         passwordx = request.getParameter("password");
-        LoginModel action = new LoginModel();
+        DatabaseConnModel action = new DatabaseConnModel();
 
         action.setUsernamex(usernamex);
         action.setPasswordx(passwordx);
         try {
-            action.getAccess();
+            action.CheckLogin();
+            action.SQLConn();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
