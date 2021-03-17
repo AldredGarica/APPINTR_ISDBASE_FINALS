@@ -27,17 +27,21 @@ public class DatabaseConnModel {
     private String rGuitar;
     //Show Additional Error
     private String rGuitarInfo = "";
+
+
     //Mutator Method
-
-
-    public void setrGuitarInfo(String rGuitarInfo) {
-        this.rGuitarInfo = rGuitarInfo;
+    public String getrGuitar() {
+        return rGuitar;
     }
-
     public String getrGuitarInfo() {
         return rGuitarInfo;
     }
-
+    public String getSQLString() {
+        return SQLString;
+    }
+    public void setrGuitarInfo(String rGuitarInfo) {
+        this.rGuitarInfo = rGuitarInfo;
+    }
     public void setgNamex(String gNamex) {
         this.gName = gNamex;
     }
@@ -47,9 +51,6 @@ public class DatabaseConnModel {
     public void setrGuitar(String rGuitar) {
         this.rGuitar = rGuitar;
     }
-    public String getrGuitar() {
-        return rGuitar;
-    }
     public void setPasswordx(String passwordx) {
         this.passwordx = passwordx;
     }
@@ -58,9 +59,6 @@ public class DatabaseConnModel {
     }
     public void setSQLString(String SQLString) {
         this.SQLString = SQLString;
-    }
-    public String getSQLString() {
-        return SQLString;
     }
     public void setLoginAccepted(boolean loginAccepted) {
         this.loginAccepted = loginAccepted;
