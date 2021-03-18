@@ -164,7 +164,7 @@ public class DatabaseConnModel {
                 String gName = result.getString("gName");
                 String gPrice = result.getString("gPrice");
                 System.out.println("");
-                builder.append("<tr><td>"+gPM+"</td><td>"+gName+"</td><td>"+gPrice+"</td></tr>");
+                builder.append("<tr><td>"+gPM+"</td><td>"+gName+"</td><td>"+gPrice+" PHP"+"</td></tr>");
                 String AppendedDBGuitars = builder.toString();
                 setgDBID(AppendedDBGuitars);
             }
