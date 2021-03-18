@@ -39,7 +39,7 @@
 <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
     <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
         <form method="post" class="login100-form validate-form" action="process.LoginAction">
-            <span class="login100-form-title p-b-37">LOGIN MODULE</span>
+            <span class="login100-form-title p-b-37">Management Module</span>
             <div class="container-login100-form-btn">
 
                 <div class="wrap-input100 validate-input m-b-20" data-validate="Enter Username">
