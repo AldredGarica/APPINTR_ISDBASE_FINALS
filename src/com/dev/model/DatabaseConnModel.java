@@ -5,13 +5,8 @@ import java.util.Properties;
 
 public class DatabaseConnModel {
 
-    /**SQL Connection (REMOTE)**/
-    private String dbms = "mysql";
-    private Object userName = "newuser";
-    private String serverName = "0.tcp.ap.ngrok.io";
-    private int portNumber = 15057;
-    private String dbName = "finals";
-    private String password = "password";
+    private final Object userName = "newuser";
+    private final Object password = "password";
     private String SQLString = "";
 
     //Username, Password and Boolean
@@ -26,37 +21,17 @@ public class DatabaseConnModel {
     //Show Additional Error
     private String rGuitarInfo = "";
     //Get All Guitars
-    private String gDBID = "";
-    private String gDBName = "";
-    private String gDBPrice = "";
+    private String gDBAppendedData = "";
 
 
     //Mutator Method
-    public String getgDBID() {
-        return gDBID;
+    public void setgDBAppendedData(String gDBAppendedData) {
+        this.gDBAppendedData = gDBAppendedData;
     }
-    public String getDbName(){
-        return gDBName;
-    }
-    public String getgDBPrice(){
-        return gDBPrice;
+    public String getgDBAppendedData(){
+        return gDBAppendedData;
     }
 
-    public void setgDBID(String gDBID) {
-        this.gDBID = gDBID;
-    }
-
-    public void setgDBName(String gDBName) {
-        this.gDBName = gDBName;
-    }
-
-    public void setgDBPrice(String gDBPrice) {
-        this.gDBPrice = gDBPrice;
-    }
-
-    public String getrGuitar() {
-        return rGuitar;
-    }
     public String getrGuitarInfo() {
         return rGuitarInfo;
     }
@@ -96,78 +71,83 @@ public class DatabaseConnModel {
     public DatabaseConnModel(){
     }
 
-    public Connection SQLConn() throws SQLException {
+    public void SQLConn() throws SQLException {
 
-        Connection conn = null;
+        Connection conn;
         Properties connectionProps = new Properties();
         connectionProps.put("user", this.userName);
         connectionProps.put("password", this.password);
 
-        if (this.dbms.equals("mysql")) {
-            conn = DriverManager.getConnection(
-                    "jdbc:" + this.dbms + "://" +
-                            this.serverName +
-                            ":" + this.portNumber + "/",
-                    connectionProps);
-        }
-       String SQLQuery = getSQLString();
+        String dbms = "mysql";
+        String serverName = "0.tcp.ap.ngrok.io";
+        int portNumber = 15057;
+        conn = DriverManager.getConnection(
+                "jdbc:" + dbms + "://" +
+                        serverName +
+                        ":" + portNumber + "/",
+                connectionProps);
+        String SQLQuery = getSQLString();
 
-        if(getSQLString().equals("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?")) {
-            //assert conn != null : "Check SQLConn";
-            PreparedStatement stmt = conn.prepareStatement(SQLQuery);
-            stmt.setString(1, usernamex);
-            stmt.setString(2, passwordx);
-            ResultSet result = stmt.executeQuery();
-            if (result.next()) {
-                System.out.println("");
-                System.out.println("Username(ColumnIndex#2): " + result.getString(2));
-                System.out.println("Password(ColumnIndex#3): " + result.getString(3));
-                setLoginAccepted(true);
-            } else {
-                System.out.println("");
-                System.out.println("Incorrect Username / Password");
+        switch (getSQLString()) {
+            case "SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?": {
+                //assert conn != null : "Check SQLConn";
+                PreparedStatement stmt = conn.prepareStatement(SQLQuery);
+                stmt.setString(1, usernamex);
+                stmt.setString(2, passwordx);
+                ResultSet result = stmt.executeQuery();
+                if (result.next()) {
+                    System.out.println();
+                    System.out.println("Username(ColumnIndex#2): " + result.getString(2));
+                    System.out.println("Password(ColumnIndex#3): " + result.getString(3));
+                    setLoginAccepted(true);
+                } else {
+                    System.out.println();
+                    System.out.println("Incorrect Username / Password");
+                }
+                break;
             }
-        }else if(getSQLString().equals("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)")){
-            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-            stmtx.setString(1, gName);
-            stmtx.setString(2, gPrice);
-            int result = stmtx.executeUpdate();
-            if (result > 0) {
-                System.out.println("");
-                System.out.println("Add Guitar Success!");
-            }else {
-                System.out.println("");
-                System.out.println("Add Guitar Failed!");
+            case "INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)": {
+                PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+                stmtx.setString(1, gName);
+                stmtx.setString(2, gPrice);
+                int result = stmtx.executeUpdate();
+                System.out.println();
+                if (result > 0) {
+                    System.out.println("Add Guitar Success!");
+                } else {
+                    System.out.println("Add Guitar Failed!");
+                }
+                break;
             }
-        }else if(getSQLString().equals("DELETE from finals.guitars WHERE gName = ?")){
-            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-            stmtx.setString(1, rGuitar);
-            int result = stmtx.executeUpdate();
-            if (result > 0) {
-                System.out.println("");
-                System.out.println("Guitar " + rGuitar + " have been deleted.");
-                setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have been deleted, Click the Return Button.</b></p>");
-            }else {
-                System.out.println("");
-                setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
-                System.out.println("Error Occurred");
+            case "DELETE from finals.guitars WHERE gName = ?": {
+                PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+                stmtx.setString(1, rGuitar);
+                int result = stmtx.executeUpdate();
+                System.out.println();
+                if (result > 0) {
+                    System.out.println("Guitar " + rGuitar + " have been deleted.");
+                    setrGuitarInfo("<b><p>Guitar " + rGuitar + " Have been deleted, Click the Return Button.</b></p>");
+                } else {
+                    setrGuitarInfo("<b><p>Guitar " + rGuitar + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
+                    System.out.println("Error Occurred");
+                }
+                break;
             }
         }
         if(getSQLString().equals("SELECT * FROM finals.guitars")){
             PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
             ResultSet result = stmtx.executeQuery();
-            StringBuilder builder = new StringBuilder("");
+            StringBuilder builder = new StringBuilder();
             while ( result.next() ) {
                 String gPM = result.getString("id");
                 String gName = result.getString("gName");
                 String gPrice = result.getString("gPrice");
-                System.out.println("");
-                builder.append("<tr><td>"+gPM+"</td><td>"+gName+"</td><td>"+gPrice+" PHP"+"</td></tr>");
+                System.out.println();
+                builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
                 String AppendedDBGuitars = builder.toString();
-                setgDBID(AppendedDBGuitars);
+                setgDBAppendedData(AppendedDBGuitars);
             }
         }
-        return conn;
     }
 
     public void CheckLogin(){
