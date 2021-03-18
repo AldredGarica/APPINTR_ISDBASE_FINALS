@@ -1,15 +1,16 @@
 package com.dev.view;
 
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import com.dev.model.DatabaseConnModel;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 @WebServlet("/success-guitar.jsp")
 public class DisplayAddGuitarSuccess extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 

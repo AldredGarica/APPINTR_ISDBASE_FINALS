@@ -10,9 +10,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class PerformRemoveGuitarAction extends HttpServlet {
-    private String rGuitar;
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        rGuitar = req.getParameter("rGuitar");
+        String rGuitar = req.getParameter("rGuitar");
 
         if (rGuitar != null) {
             DatabaseConnModel action = new DatabaseConnModel();

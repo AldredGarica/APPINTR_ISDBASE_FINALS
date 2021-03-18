@@ -12,11 +12,10 @@ import java.sql.SQLException;
 
 
 public class LoginAction extends HttpServlet {
-    private String username;
     private String password;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        username = request.getParameter("username");
+        String username = request.getParameter("username");
         password = request.getParameter("password");
         DatabaseConnModel action = new DatabaseConnModel();
 
@@ -28,7 +27,7 @@ public class LoginAction extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        if(action.isLoginAccepted() == true) {
+        if(action.isLoginAccepted()) {
             request.setAttribute("d24mcx432", action);
             RequestDispatcher dispatcher = request.getRequestDispatcher("display.html");
             dispatcher.forward(request, response);

@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet("/error.jsp")
 public class errorDisplay extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //set the MIME type response
         response.setContentType("text/html");
 

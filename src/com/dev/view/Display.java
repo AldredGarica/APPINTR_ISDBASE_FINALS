@@ -1,20 +1,21 @@
 package com.dev.view;
+
+import com.dev.model.DatabaseConnModel;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.*;
-
-import com.dev.model.DatabaseConnModel;
-
 public class Display extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         DatabaseConnModel action = (DatabaseConnModel)request.getAttribute("d24mcx432");
-        if(action.isLoginAccepted() == true) {
+        if(action.isLoginAccepted()) {
             try {
                 action.getDBGuitars();
                 action.SQLConn();
@@ -39,10 +40,7 @@ public class Display extends HttpServlet {
                     "</body></html>";
             out.println(myvar);
 
-        }else{
-            //
         }
-
     }
 
 }

@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 
 @WebServlet("/remove-guitar.jsp")
 public class DisplayRemoveGuitarSuccess extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
