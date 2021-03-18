@@ -27,9 +27,35 @@ public class DatabaseConnModel {
     private String rGuitar;
     //Show Additional Error
     private String rGuitarInfo = "";
+    //Get All Guitars
+    private String gDBID = "";
+    private String gDBName = "";
+    private String gDBPrice = "";
 
 
     //Mutator Method
+    public String getgDBID() {
+        return gDBID;
+    }
+    public String getDbName(){
+        return gDBName;
+    }
+    public String getgDBPrice(){
+        return gDBPrice;
+    }
+
+    public void setgDBID(String gDBID) {
+        this.gDBID = gDBID;
+    }
+
+    public void setgDBName(String gDBName) {
+        this.gDBName = gDBName;
+    }
+
+    public void setgDBPrice(String gDBPrice) {
+        this.gDBPrice = gDBPrice;
+    }
+
     public String getrGuitar() {
         return rGuitar;
     }
@@ -132,14 +158,15 @@ public class DatabaseConnModel {
         if(getSQLString().equals("SELECT * FROM finals.guitars")){
             PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
             ResultSet result = stmtx.executeQuery();
+            StringBuilder builder = new StringBuilder("");
             while ( result.next() ) {
                 String gPM = result.getString("id");
                 String gName = result.getString("gName");
                 String gPrice = result.getString("gPrice");
                 System.out.println("");
-                System.out.println(gPM);
-                System.out.println(gName);
-                System.out.println(gPrice);
+                builder.append("<tr><td>"+gPM+"</td><td>"+gName+"</td><td>"+gPrice+"</td></tr>");
+                String AppendedDBGuitars = builder.toString();
+                setgDBID(AppendedDBGuitars);
             }
         }
         return conn;
