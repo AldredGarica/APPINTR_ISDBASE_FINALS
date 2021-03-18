@@ -31,7 +31,6 @@ public class DatabaseConnModel {
     public String getgDBAppendedData(){
         return gDBAppendedData;
     }
-
     public String getrGuitarInfo() {
         return rGuitarInfo;
     }
