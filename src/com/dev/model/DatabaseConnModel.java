@@ -91,10 +91,10 @@ public class DatabaseConnModel {
         switch (getSQLString()) {
             case "SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?": {
                 //assert conn != null : "Check SQLConn";
-                PreparedStatement stmt = conn.prepareStatement(SQLQuery);
-                stmt.setString(1, usernamex);
-                stmt.setString(2, passwordx);
-                ResultSet result = stmt.executeQuery();
+                PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+                stmtx.setString(1, usernamex);
+                stmtx.setString(2, passwordx);
+                ResultSet result = stmtx.executeQuery();
                 if (result.next()) {
                     System.out.println();
                     System.out.println("Username(ColumnIndex#2): " + result.getString(2));
@@ -132,21 +132,21 @@ public class DatabaseConnModel {
                     System.out.println("Error Occurred");
                 }
                 break;
+            } case "SELECT * FROM finals.guitars": {
+                PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+                ResultSet result = stmtx.executeQuery();
+                StringBuilder builder = new StringBuilder();
+                while ( result.next() ) {
+                    String gPM = result.getString("id");
+                    String gName = result.getString("gName");
+                    String gPrice = result.getString("gPrice");
+                    System.out.println();
+                    builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
+                    String AppendedDBGuitars = builder.toString();
+                    setgDBAppendedData(AppendedDBGuitars);
             }
+                break;
         }
-        if(getSQLString().equals("SELECT * FROM finals.guitars")){
-            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-            ResultSet result = stmtx.executeQuery();
-            StringBuilder builder = new StringBuilder();
-            while ( result.next() ) {
-                String gPM = result.getString("id");
-                String gName = result.getString("gName");
-                String gPrice = result.getString("gPrice");
-                System.out.println();
-                builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
-                String AppendedDBGuitars = builder.toString();
-                setgDBAppendedData(AppendedDBGuitars);
-            }
         }
     }
 
