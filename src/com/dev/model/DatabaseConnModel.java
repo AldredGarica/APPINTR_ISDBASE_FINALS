@@ -84,8 +84,8 @@ public class DatabaseConnModel {
         connectionProps.put("password", this.password);
 
         String dbms = "mysql";
-        String serverName = "0.tcp.ap.ngrok.io";
-        int portNumber = 15057;
+        String serverName = "1.tcp.ap.ngrok.io";
+        int portNumber = 21243;
         conn = DriverManager.getConnection(
                 "jdbc:" + dbms + "://" +
                         serverName +
