@@ -95,10 +95,12 @@ public class DatabaseConnModel {
             stmt.setString(2, passwordx);
             ResultSet result = stmt.executeQuery();
             if (result.next()) {
+                System.out.println("");
                 System.out.println("Username(ColumnIndex#2): " + result.getString(2));
                 System.out.println("Password(ColumnIndex#3): " + result.getString(3));
                 setLoginAccepted(true);
             } else {
+                System.out.println("");
                 System.out.println("Incorrect Username / Password");
             }
         }else if(getSQLString().equals("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)")){
@@ -107,8 +109,10 @@ public class DatabaseConnModel {
             stmtx.setString(2, gPrice);
             int result = stmtx.executeUpdate();
             if (result > 0) {
+                System.out.println("");
                 System.out.println("Add Guitar Success!");
             }else {
+                System.out.println("");
                 System.out.println("Add Guitar Failed!");
             }
         }else if(getSQLString().equals("DELETE from finals.guitars WHERE gName = ?")){
@@ -116,11 +120,26 @@ public class DatabaseConnModel {
             stmtx.setString(1, rGuitar);
             int result = stmtx.executeUpdate();
             if (result > 0) {
+                System.out.println("");
                 System.out.println("Guitar " + rGuitar + " have been deleted.");
                 setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have been deleted, Click the Return Button.</b></p>");
             }else {
+                System.out.println("");
                 setrGuitarInfo("<b><p>Guitar " +  rGuitar + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
                 System.out.println("Error Occurred");
+            }
+        }
+        if(getSQLString().equals("SELECT * FROM finals.guitars")){
+            PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
+            ResultSet result = stmtx.executeQuery();
+            while ( result.next() ) {
+                String gPM = result.getString("id");
+                String gName = result.getString("gName");
+                String gPrice = result.getString("gPrice");
+                System.out.println("");
+                System.out.println(gPM);
+                System.out.println(gName);
+                System.out.println(gPrice);
             }
         }
         return conn;
@@ -131,6 +150,9 @@ public class DatabaseConnModel {
     }
     public void AddGuitar(){
         setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
+    }
+    public void getDBGuitars(){
+        setSQLString("SELECT * FROM finals.guitars");
     }
 
     public void RemoveGuitar(){
