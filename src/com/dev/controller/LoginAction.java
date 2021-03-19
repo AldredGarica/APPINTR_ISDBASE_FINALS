@@ -12,11 +12,10 @@ import java.sql.SQLException;
 
 
 public class LoginAction extends HttpServlet {
-    private String password;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        password = request.getParameter("password");
+        String password = request.getParameter("password");
         DatabaseConnModel action = new DatabaseConnModel();
 
         action.setUsernamex(username);

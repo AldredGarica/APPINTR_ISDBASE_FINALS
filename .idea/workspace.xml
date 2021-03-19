@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="MachineApplication:war exploded" />
+      <artifact name="Finals" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error">
+      <change afterPath="$PROJECT_DIR$/src/com/dev/model/UtilModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MachineApplication1_2_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MachineApplication_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/model/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +23,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -67,10 +71,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.37816092" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,15 +83,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.4">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,10 +99,11 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.0.4" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.4" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="MachineApplication:war exploded">
+        <artifact name="Finals">
           <settings>
-            <option name="CONTEXT_PATH" value="/MachineApplication_war_exploded" />
+            <option name="CONTEXT_PATH" value="/Finals" />
           </settings>
         </artifact>
       </deployment>
@@ -178,7 +181,8 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="MachineApplication:war exploded" />
+          <artifact name="Finals" />
+          <artifact name="Finals archive" />
         </option>
       </method>
     </configuration>
@@ -198,7 +202,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="240bec33-fc2e-44fd-9eb7-0a4518870f3f" name="Default Changelist" comment="" />
+      <changelist id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error" />
       <created>1569624818241</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -210,6 +214,9 @@
       <workItem from="1615911335296" duration="5439000" />
       <workItem from="1615919324118" duration="2644000" />
       <workItem from="1615948787987" duration="13161000" />
+      <workItem from="1616101499915" duration="2615000" />
+      <workItem from="1616105023947" duration="1115000" />
+      <workItem from="1616191880257" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
@@ -316,13 +323,36 @@
       <option name="project" value="LOCAL" />
       <updated>1615970330983</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add Notes.">
+      <created>1616079364795</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616079364796</updated>
+    </task>
+    <task id="LOCAL-00017" summary="New DB Connection">
+      <created>1616102274433</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616102274433</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -356,6 +386,9 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Update .gitignore pt2" />
     <MESSAGE value="Add index.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add index.jsp" />
+    <MESSAGE value="To Do: Frontend Part" />
+    <MESSAGE value="Add Notes." />
+    <MESSAGE value="New DB Connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="New DB Connection" />
   </component>
 </project>

@@ -2,7 +2,7 @@ package com.dev.model;
 
 import java.sql.*;
 import java.util.Properties;
-
+import com.dev.model.UtilModel;
 public class DatabaseConnModel {
 
     private final Object userName = "newuser";
@@ -65,7 +65,7 @@ public class DatabaseConnModel {
         return loginAccepted;
     }
 
-
+    UtilModel UtilityX = new UtilModel();
     //Init
     public DatabaseConnModel(){
     }
@@ -105,7 +105,8 @@ public class DatabaseConnModel {
                 stmtx.setString(2, passwordx);
                 ResultSet result = stmtx.executeQuery();
                 if (result.next()) {
-                    System.out.println();
+                    System.out.println("Login Details: ");
+                    System.out.println(UtilityX.myPublicIp());
                     System.out.println("Username(ColumnIndex#2): " + result.getString(2));
                     System.out.println("Password(ColumnIndex#3): " + result.getString(3));
                     setLoginAccepted(true);
