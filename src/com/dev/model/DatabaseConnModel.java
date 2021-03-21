@@ -116,7 +116,6 @@ public class DatabaseConnModel {
 
         switch (getSQLString()) {
             case "SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?": {
-                //assert conn != null : "Check SQLConn";
                 PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
                 stmtx.setString(1, usernamex);
                 stmtx.setString(2, passwordx);
