@@ -66,7 +66,7 @@ public class DatabaseConnModel {
         return loginAccepted;
     }
 
-    UtilModel UtilityX = new UtilModel();
+
     public DatabaseConnModel(){
     }
 
@@ -103,8 +103,6 @@ public class DatabaseConnModel {
         connectionProps.put("password", this.password);
 
         String dbms = "mysql";
-        //String serverName = "1.tcp.ap.ngrok.io";
-        //int portNumber = 21243;
         conn = DriverManager.getConnection(
                 "jdbc:" + dbms + "://" +
                         serverName +
@@ -125,7 +123,7 @@ public class DatabaseConnModel {
                 ResultSet result = stmtx.executeQuery();
                 if (result.next()) {
                     System.out.println("Login Details: ");
-                    System.out.println(UtilityX.myPublicIp());
+                    System.out.println(UtilModel.myPublicIp());
                     System.out.println("Username(ColumnIndex#2): " + result.getString(2));
                     System.out.println("Password(ColumnIndex#3): " + result.getString(3));
                     setLoginAccepted(true);
