@@ -2,7 +2,6 @@ package com.dev.model;
 
 import java.sql.*;
 import java.util.Properties;
-import com.dev.model.UtilModel;
 public class DatabaseConnModel {
 
     private final Object userName = "newuser";
@@ -24,6 +23,7 @@ public class DatabaseConnModel {
     private String rGuitarInfo = "";
     //Get All Guitars
     private String gDBAppendedData = "";
+    private int method;
 
 
     //Mutator Method
@@ -198,6 +198,7 @@ public class DatabaseConnModel {
      *         }
      *
      * **/
+    /** OLD
     public void CheckLogin(){
         setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
     }
@@ -210,7 +211,25 @@ public class DatabaseConnModel {
     public void RemoveGuitar(){
         setSQLString("DELETE from finals.guitars WHERE gName = ?");
     }
+     **/
 
-
+    public void SQLQuery(int method){
+        switch (method) {
+            case 1:
+                setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
+                break;
+            case 2:
+                setSQLString("SELECT * FROM finals.guitars");
+                break;
+            case 3:
+                setSQLString("DELETE from finals.guitars WHERE gName = ?");
+                break;
+            case 4:
+                setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
+                break;
+            default:
+                break;
+        }
+    }
 }
 
