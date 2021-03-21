@@ -99,24 +99,22 @@ public class DatabaseConnModel {
             connectionProps.put("user", this.userName);
             connectionProps.put("password", this.password);
 
-            String dbms = "mysql";
             conn = DriverManager.getConnection(
-                    "jdbc:" + dbms + "://" +
+                    "jdbc:mysql://" +
                             serverName +
                             ":" + portNumber + "/",
                     connectionProps);
             String SQLQuery = getSQLString();
+            PreparedStatement stmt = conn.prepareStatement(SQLQuery);
 
             /**
              * This part will use a switch statement to check and perform the selected SQL Query;
              */
-
             switch (getSQLString()) {
                 case "SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?": {
-                    PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-                    stmtx.setString(1, usernamex);
-                    stmtx.setString(2, passwordx);
-                    ResultSet result = stmtx.executeQuery();
+                    stmt.setString(1, usernamex);
+                    stmt.setString(2, passwordx);
+                    ResultSet result = stmt.executeQuery();
                     if (result.next()) {
                         System.out.println("Login Details: ");
                         System.out.println("Username(ColumnIndex#2): " + result.getString(2));
@@ -129,10 +127,9 @@ public class DatabaseConnModel {
                     break;
                 }
                 case "INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)": {
-                    PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-                    stmtx.setString(1, gName);
-                    stmtx.setString(2, gPrice);
-                    int result = stmtx.executeUpdate();
+                    stmt.setString(1, gName);
+                    stmt.setString(2, gPrice);
+                    int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
                         System.out.println("Add Guitar Success!");
@@ -142,9 +139,8 @@ public class DatabaseConnModel {
                     break;
                 }
                 case "DELETE from finals.guitars WHERE gName = ?": {
-                    PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-                    stmtx.setString(1, rGuitar);
-                    int result = stmtx.executeUpdate();
+                    stmt.setString(1, rGuitar);
+                    int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
                         System.out.println("Guitar " + rGuitar + " have been deleted.");
@@ -156,8 +152,7 @@ public class DatabaseConnModel {
                     break;
                 }
                 case "SELECT * FROM finals.guitars": {
-                    PreparedStatement stmtx = conn.prepareStatement(SQLQuery);
-                    ResultSet result = stmtx.executeQuery();
+                    ResultSet result = stmt.executeQuery();
                     StringBuilder builder = new StringBuilder();
                     while (result.next()) {
                         String gPM = result.getString("id");
