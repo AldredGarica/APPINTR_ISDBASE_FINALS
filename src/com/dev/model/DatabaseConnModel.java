@@ -69,9 +69,9 @@ public class DatabaseConnModel {
     public DatabaseConnModel(){
     }
 
-    public void SQLConn(int method, boolean SQLConn) throws SQLException {
+    public void SQLConn(int Query, boolean SQLConn) throws SQLException {
 
-        switch (method) {
+        switch (Query) {
             case 1:
                 setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
                 break;
