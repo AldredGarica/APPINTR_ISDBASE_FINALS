@@ -7,6 +7,8 @@ public class DatabaseConnModel {
 
     private final Object userName = "newuser";
     private final Object password = "password";
+    private final Object serverName = "1.tcp.ap.ngrok.io";
+    private final int portNumber = Integer.parseInt("21243");
     private String SQLString = "";
 
     //Username, Password and Boolean
@@ -84,8 +86,8 @@ public class DatabaseConnModel {
         connectionProps.put("password", this.password);
 
         String dbms = "mysql";
-        String serverName = "1.tcp.ap.ngrok.io";
-        int portNumber = 21243;
+        //String serverName = "1.tcp.ap.ngrok.io";
+        //int portNumber = 21243;
         conn = DriverManager.getConnection(
                 "jdbc:" + dbms + "://" +
                         serverName +
