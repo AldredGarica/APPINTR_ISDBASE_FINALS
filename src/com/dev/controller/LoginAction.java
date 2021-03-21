@@ -21,8 +21,7 @@ public class LoginAction extends HttpServlet {
         action.setUsernamex(username);
         action.setPasswordx(password);
         try {
-            action.SQLQuery(4);
-            action.SQLConn();
+            action.SQLConn(4, true);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

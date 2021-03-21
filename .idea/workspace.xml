@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MachineApplication1_2_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MachineApplication_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformRemoveGuitarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformRemoveGuitarAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +220,7 @@
       <workItem from="1616191880257" duration="1964000" />
       <workItem from="1616315249852" duration="2840000" />
       <workItem from="1616343548013" duration="337000" />
-      <workItem from="1616345723715" duration="1051000" />
+      <workItem from="1616345723715" duration="3537000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
@@ -354,7 +355,49 @@
       <option name="project" value="LOCAL" />
       <updated>1616315477332</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="SQLQuery switch from if to case">
+      <created>1616347087856</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347087856</updated>
+    </task>
+    <task id="LOCAL-00021" summary="DatabaseConnModel: Remove private int method">
+      <created>1616347498387</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347498387</updated>
+    </task>
+    <task id="LOCAL-00022" summary="DatabaseConnModel: Move SQLQuery above">
+      <created>1616347632726</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347632726</updated>
+    </task>
+    <task id="LOCAL-00023" summary="DatabaseConnModel: Code Optimization">
+      <created>1616347985827</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347985827</updated>
+    </task>
+    <task id="LOCAL-00024" summary="DatabaseConnModel: Code Optimization pt2">
+      <created>1616348003343</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616348003343</updated>
+    </task>
+    <task id="LOCAL-00025" summary="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes.">
+      <created>1616348277226</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616348277226</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +431,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Push" />
     <MESSAGE value="PerformDatabaseModel Initiate Connection to Database" />
     <MESSAGE value="Display.java Remove Field Validation" />
     <MESSAGE value="Add .gitignore" />
@@ -408,6 +450,12 @@
     <MESSAGE value="New DB Connection" />
     <MESSAGE value="Add getIP Util and Minor Code Optimization" />
     <MESSAGE value="Make Database Connection as final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Database Connection as final" />
+    <MESSAGE value="SQLQuery switch from if to case" />
+    <MESSAGE value="DatabaseConnModel: Remove private int method" />
+    <MESSAGE value="DatabaseConnModel: Move SQLQuery above" />
+    <MESSAGE value="DatabaseConnModel: Code Optimization" />
+    <MESSAGE value="DatabaseConnModel: Code Optimization pt2" />
+    <MESSAGE value="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes." />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes." />
   </component>
 </project>

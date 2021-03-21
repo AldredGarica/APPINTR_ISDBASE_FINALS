@@ -20,9 +20,8 @@ public class PerformAddGuitarAction extends HttpServlet {
 
             action.setgNamex(gName);
             action.setgPrice(gPrice);
-            action.SQLQuery(1);
             try {
-                action.SQLConn();
+                action.SQLConn(1,true);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

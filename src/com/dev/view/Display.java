@@ -17,8 +17,7 @@ public class Display extends HttpServlet {
         DatabaseConnModel action = (DatabaseConnModel)request.getAttribute("d24mcx432");
         if(action.isLoginAccepted()) {
             try {
-                action.SQLQuery(2);
-                action.SQLConn();
+                action.SQLConn(2, true);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
