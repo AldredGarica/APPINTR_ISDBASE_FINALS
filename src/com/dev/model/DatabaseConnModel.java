@@ -23,7 +23,6 @@ public class DatabaseConnModel {
     private String rGuitarInfo = "";
     //Get All Guitars
     private String gDBAppendedData = "";
-    private int method;
 
 
     //Mutator Method
