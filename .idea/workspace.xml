@@ -7,7 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error">
+    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Display: Make Refresh Database text Bold">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
+    <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -72,7 +72,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.37816092" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -211,6 +211,7 @@
       <workItem from="1616343548013" duration="337000" />
       <workItem from="1616345723715" duration="3537000" />
       <workItem from="1617210900446" duration="1214000" />
+      <workItem from="1617309445788" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
