@@ -186,7 +186,7 @@ public class DatabaseConnModel {
                         String GPUPriceDB = result.getString("price");
                         String GPUStocksDB = result.getString("stocks");
                         String GPUOEMDB = result.getString("oem_manufacturer");
-                        builderTwo.append("<tr><td>").append(GPUNameDB).append("</td><td>").append(GPUPriceDB).append(" PHP").append("</td></td>").append(GPUStocksDB).append("</td><td>").append(GPUOEMDB).append("</td><tr>");
+                        builderTwo.append("<tr><td>").append(GPUNameDB).append("</td><td>").append(GPUPriceDB).append(" PHP").append("</td><td>").append(GPUStocksDB).append("</td><td>").append(GPUOEMDB).append("</td></tr>");
                         String AppendedDBGPUTwo = builderTwo.toString();
                         setgDBAppendedDataTwo(AppendedDBGPUTwo);
                     }
