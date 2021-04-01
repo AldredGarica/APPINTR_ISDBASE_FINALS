@@ -14,13 +14,13 @@ public class DatabaseConnModel {
     private String usernamex;
     private String passwordx;
     private boolean loginAccepted = false;
-    //Add Guitar
-    private String gName;
-    private String gPrice;
-    //Remove Guitar
-    private String rGuitar;
+    //Add GPU
+    private String GPUName;
+    private String GPUPrice;
+    //Remove GPU
+    private String GPU;
     //Show Additional Error
-    private String rGuitarInfo = "";
+    private String GPUInfo = "";
     //Get All Guitars
     private String gDBAppendedData = "";
 
@@ -32,23 +32,23 @@ public class DatabaseConnModel {
     public String getgDBAppendedData(){
         return gDBAppendedData;
     }
-    public String getrGuitarInfo() {
-        return rGuitarInfo;
+    public String getGPUInfo() {
+        return GPUInfo;
     }
     public String getSQLString() {
         return SQLString;
     }
-    public void setrGuitarInfo(String rGuitarInfo) {
-        this.rGuitarInfo = rGuitarInfo;
+    public void setGPUInfo(String GPUInfo) {
+        this.GPUInfo = GPUInfo;
     }
-    public void setgNamex(String gNamex) {
-        this.gName = gNamex;
+    public void setGPUName(String gNamex) {
+        this.GPUName = gNamex;
     }
-    public void setgPrice(String gPrice) {
-        this.gPrice = gPrice;
+    public void setGPUPrice(String GPUPrice) {
+        this.GPUPrice = GPUPrice;
     }
-    public void setrGuitar(String rGuitar) {
-        this.rGuitar = rGuitar;
+    public void setGPU(String GPU) {
+        this.GPU = GPU;
     }
     public void setPasswordx(String passwordx) {
         this.passwordx = passwordx;
@@ -73,13 +73,13 @@ public class DatabaseConnModel {
 
         switch (Query) {
             case 1:
-                setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
+                setSQLString("INSERT INTO isdbase.gpu (name, price) VALUES (?, ?)");
                 break;
             case 2:
-                setSQLString("SELECT * FROM finals.guitars");
+                setSQLString("SELECT * FROM isdbase.gpu");
                 break;
             case 3:
-                setSQLString("DELETE from finals.guitars WHERE gName = ?");
+                setSQLString("DELETE from isdbase.gpu WHERE name = ?");
                 break;
             case 4:
                 setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
@@ -89,7 +89,7 @@ public class DatabaseConnModel {
         }
 
         /**
-         * NOTES BY: FRANCIS MICO A. ROOSARIO ID#11846551
+         * NOTES BY: FRANCIS MICO A. ROSARIO ID#11846551
          *
          * This part will try to connect to MySQL Database; 0.tcp.ap.ngrok is a reverse ssh connection, linking directly to my RasberryPi4 Database located at my home.
          * **/
@@ -105,8 +105,10 @@ public class DatabaseConnModel {
                             ":" + portNumber + "/",
                     connectionProps);
             String SQLQuery = getSQLString();
+            //Primary Query
             PreparedStatement stmt = conn.prepareStatement(SQLQuery);
-
+            //Secondary Query
+            PreparedStatement stmt2 = conn.prepareStatement("SET FOREIGN_KEY_CHECKS=OFF");
             /**
              * This part will use a switch statement to check and perform the selected SQL Query;
              */
@@ -126,9 +128,9 @@ public class DatabaseConnModel {
                     }
                     break;
                 }
-                case "INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)": {
-                    stmt.setString(1, gName);
-                    stmt.setString(2, gPrice);
+                case "INSERT INTO isdbase.gpu (name, price) VALUES (?, ?)": {
+                    stmt.setString(1, GPUName);
+                    stmt.setString(2, GPUPrice);
                     int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
@@ -138,26 +140,27 @@ public class DatabaseConnModel {
                     }
                     break;
                 }
-                case "DELETE from finals.guitars WHERE gName = ?": {
-                    stmt.setString(1, rGuitar);
+                case "DELETE from isdbase.gpu WHERE name = ?": {
+                    stmt2.execute();
+                    stmt.setString(1, GPU);
                     int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
-                        System.out.println("Guitar " + rGuitar + " have been deleted.");
-                        setrGuitarInfo("<b><p>Guitar " + rGuitar + " Have been deleted, Click the Return Button.</b></p>");
+                        System.out.println("GPU " + GPU + " have been deleted.");
+                        setGPUInfo("<b><p>GPU " + GPU + " Have been deleted, Click the Return Button.</b></p>");
                     } else {
-                        setrGuitarInfo("<b><p>Guitar " + rGuitar + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
+                        setGPUInfo("<b><p>GPU " + GPU + " Have not been removed / Unidentified Problem Occurred, Click the Return Button.</b></p>");
                         System.out.println("Error Occurred");
                     }
                     break;
                 }
-                case "SELECT * FROM finals.guitars": {
+                case "SELECT * FROM isdbase.gpu": {
                     ResultSet result = stmt.executeQuery();
                     StringBuilder builder = new StringBuilder();
                     while (result.next()) {
                         String gPM = result.getString("id");
-                        String gName = result.getString("gName");
-                        String gPrice = result.getString("gPrice");
+                        String gName = result.getString("name");
+                        String gPrice = result.getString("price");
                         System.out.println();
                         builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
                         String AppendedDBGuitars = builder.toString();

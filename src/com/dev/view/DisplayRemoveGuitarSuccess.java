@@ -1,7 +1,6 @@
 package com.dev.view;
 
 import com.dev.model.DatabaseConnModel;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,7 +16,7 @@ public class DisplayRemoveGuitarSuccess extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         DatabaseConnModel action = (DatabaseConnModel)request.getAttribute("d24mcx432");
-        String MoreInfo = action.getrGuitarInfo();
+        String MoreInfo = action.getGPUInfo();
         System.out.println(MoreInfo);
                 String myvar = "<html lang=\"en\"><head>"+
                 "	<title>Login V9</title>"+

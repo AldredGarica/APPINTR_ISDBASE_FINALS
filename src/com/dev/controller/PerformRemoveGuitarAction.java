@@ -16,7 +16,7 @@ public class PerformRemoveGuitarAction extends HttpServlet {
         if (rGuitar != null) {
             DatabaseConnModel action = new DatabaseConnModel();
 
-            action.setrGuitar(rGuitar);
+            action.setGPU(rGuitar);
             try {
                 action.SQLConn(3,true);
             } catch (SQLException throwables) {

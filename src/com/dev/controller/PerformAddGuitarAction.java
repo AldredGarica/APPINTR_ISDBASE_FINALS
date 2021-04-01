@@ -18,8 +18,8 @@ public class PerformAddGuitarAction extends HttpServlet {
         if (gPrice != null && gName != null) {
             DatabaseConnModel action = new DatabaseConnModel();
 
-            action.setgNamex(gName);
-            action.setgPrice(gPrice);
+            action.setGPUName(gName);
+            action.setGPUPrice(gPrice);
             try {
                 action.SQLConn(1,true);
             } catch (SQLException throwables) {
