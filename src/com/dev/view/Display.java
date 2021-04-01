@@ -37,6 +37,7 @@ public class Display extends HttpServlet {
                     action.getgDBAppendedData()
                     +"<b><a href=\"javascript:location.reload(true)\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click Here to Refresh GPU Database View</a></b>"+
                     "</tbody></table>        " +
+                    "<br> " +
                     "<table style=\"width:100%\">  <tbody><tr>    <th>GPU Name</th>    <th>GPU Price</th> <th>Stocks Available</th>  <th>Manufacturer</th>  </tr>"+ action.getgDBAppendedDataTwo() +"</tbody></table>" +
                     "</form>    </div></div><div id=\"dropDownSelect1\"></div><script src=\"vendor/jquery/jquery-3.2.1.min.js\"></script><script src=\"vendor/animsition/js/animsition.min.js\"></script><script src=\"vendor/bootstrap/js/popper.js\"></script><script src=\"vendor/bootstrap/js/bootstrap.min.js\"></script><script src=\"vendor/select2/select2.min.js\"></script><script src=\"vendor/daterangepicker/moment.min.js\"></script><script src=\"vendor/daterangepicker/daterangepicker.js\"></script><script src=\"vendor/countdowntime/countdowntime.js\"></script><script src=\"js/main.js\"></script>"+
                     "</body></html>";
