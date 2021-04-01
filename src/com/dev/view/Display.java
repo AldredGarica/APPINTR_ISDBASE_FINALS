@@ -35,7 +35,7 @@ public class Display extends HttpServlet {
                     "    <th>GPU Price</th>"+
                     "  </tr>"+
                     action.getgDBAppendedData()
-                    +"<a href=\"javascript:location.reload(true)\"><p style=\"text-align:center;\">Click Here to Refresh GPU Database View</p></a>"+
+                    +"<b><a href=\"javascript:location.reload(true)\"><p style=\"text-align:center;\">Click Here to Refresh GPU Database View</p></a></b>"+
                     "</tbody></table>        " +
                     "<br> " +
                     "<b><p style=\"text-align:center;\">GPU with Prices, Units Available and Manufacturer</p></b>" +
