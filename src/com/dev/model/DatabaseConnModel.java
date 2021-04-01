@@ -143,9 +143,9 @@ public class DatabaseConnModel {
                     int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
-                        System.out.println("Add Guitar Success!");
+                        System.out.println("Add GPU Success!");
                     } else {
-                        System.out.println("Add Guitar Failed!");
+                        System.out.println("Add GPU Failed!");
                     }
                     break;
                 }
