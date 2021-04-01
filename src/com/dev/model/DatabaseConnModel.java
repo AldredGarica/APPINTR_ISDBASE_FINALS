@@ -21,7 +21,7 @@ public class DatabaseConnModel {
     private String GPU;
     //Show Additional Error
     private String GPUInfo = "";
-    //Get All Guitars
+    //Get All GPU
     private String gDBAppendedData = "";
 
 
