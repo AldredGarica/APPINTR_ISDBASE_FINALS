@@ -92,7 +92,7 @@ public class DatabaseConnModel {
                 setSQLString("SELECT * FROM isdbase.users WHERE binary loginid = ? and binary password = ?");
                 break;
             case 5:
-                setSQLString("SELECT g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer");
+                setSQLString("SELECT g.id, g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer");
             default:
                 break;
         }
@@ -178,15 +178,16 @@ public class DatabaseConnModel {
                     }
                     break;
                 }
-                case "SELECT g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer": {
+                case "SELECT g.id, g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer": {
                     ResultSet result = stmt.executeQuery();
                     StringBuilder builderTwo = new StringBuilder();
                     while(result.next()){
+                        String GPUid = result.getString("id");
                         String GPUNameDB = result.getString("name");
                         String GPUPriceDB = result.getString("price");
                         String GPUStocksDB = result.getString("stocks");
                         String GPUOEMDB = result.getString("oem_manufacturer");
-                        builderTwo.append("<tr><td>").append(GPUNameDB).append("</td><td>").append(GPUPriceDB).append(" PHP").append("</td><td>").append(GPUStocksDB).append("</td><td>").append(GPUOEMDB).append("</td></tr>");
+                        builderTwo.append("<tr><td>").append(GPUid).append("</td><td>").append(GPUNameDB).append("</td><td>").append(GPUPriceDB).append(" PHP").append("</td><td>").append(GPUStocksDB).append("</td><td>").append(GPUOEMDB).append("</td></tr>");
                         String AppendedDBGPUTwo = builderTwo.toString();
                         setgDBAppendedDataTwo(AppendedDBGPUTwo);
                     }
