@@ -23,14 +23,21 @@ public class DatabaseConnModel {
     private String GPUInfo = "";
     //Get All GPU
     private String gDBAppendedData = "";
-
+    private String gDBAppendedDataTwo = "";
 
     //Mutator Method
+
+    public void setgDBAppendedDataTwo(String gDBAppendedDataTwo) {
+        this.gDBAppendedDataTwo = gDBAppendedDataTwo;
+    }
     public void setgDBAppendedData(String gDBAppendedData) {
         this.gDBAppendedData = gDBAppendedData;
     }
     public String getgDBAppendedData(){
         return gDBAppendedData;
+    }
+    public String getgDBAppendedDataTwo() {
+        return gDBAppendedDataTwo;
     }
     public String getGPUInfo() {
         return GPUInfo;
@@ -82,8 +89,10 @@ public class DatabaseConnModel {
                 setSQLString("DELETE from isdbase.gpu WHERE name = ?");
                 break;
             case 4:
-                setSQLString("SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?");
+                setSQLString("SELECT * FROM isdbase.users WHERE binary loginid = ? and binary password = ?");
                 break;
+            case 5:
+                setSQLString("SELECT g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer");
             default:
                 break;
         }
@@ -102,7 +111,7 @@ public class DatabaseConnModel {
             conn = DriverManager.getConnection(
                     "jdbc:mysql://" +
                             serverName +
-                            ":" + portNumber + "/",
+                            ":" + portNumber + "/isdbase",
                     connectionProps);
             String SQLQuery = getSQLString();
             //Primary Query
@@ -113,7 +122,7 @@ public class DatabaseConnModel {
              * This part will use a switch statement to check and perform the selected SQL Query;
              */
             switch (getSQLString()) {
-                case "SELECT * FROM finals.users WHERE binary loginid = ? and binary password = ?": {
+                case "SELECT * FROM isdbase.users WHERE binary loginid = ? and binary password = ?": {
                     stmt.setString(1, usernamex);
                     stmt.setString(2, passwordx);
                     ResultSet result = stmt.executeQuery();
@@ -153,6 +162,7 @@ public class DatabaseConnModel {
                         System.out.println("Error Occurred");
                     }
                     break;
+
                 }
                 case "SELECT * FROM isdbase.gpu": {
                     ResultSet result = stmt.executeQuery();
@@ -163,11 +173,25 @@ public class DatabaseConnModel {
                         String gPrice = result.getString("price");
                         System.out.println();
                         builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
-                        String AppendedDBGuitars = builder.toString();
-                        setgDBAppendedData(AppendedDBGuitars);
+                        String AppendedDBGPU = builder.toString();
+                        setgDBAppendedData(AppendedDBGPU);
                     }
                     break;
-                } /** This is the part where you can add another case statement, make sure to delete this comment **/
+                }
+                case "SELECT g.name, g.price, i.stocks, m.oem_manufacturer FROM isdbase.gpu as g INNER JOIN inventory i on g.id = i.id INNER JOIN isdbase.manufacturer as m on i.manufacturer = m.oem_manufacturer": {
+                    ResultSet result = stmt.executeQuery();
+                    StringBuilder builderTwo = new StringBuilder();
+                    while(result.next()){
+                        String GPUNameDB = result.getString("name");
+                        String GPUPriceDB = result.getString("price");
+                        String GPUStocksDB = result.getString("stocks");
+                        String GPUOEMDB = result.getString("oem_manufacturer");
+                        builderTwo.append("<tr><td>").append(GPUNameDB).append("</td><td>").append(GPUPriceDB).append(" PHP").append("</td></td>").append(GPUStocksDB).append("</td><td>").append(GPUOEMDB).append("</td><tr>");
+                        String AppendedDBGPUTwo = builderTwo.toString();
+                        setgDBAppendedDataTwo(AppendedDBGPUTwo);
+                    }
+                    break;
+                }
             }
         }else{
             System.out.println("SQL Connection is set to False");
