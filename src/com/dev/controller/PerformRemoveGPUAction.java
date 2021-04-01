@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class PerformRemoveGuitarAction extends HttpServlet {
+public class PerformRemoveGPUAction extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String rGuitar = req.getParameter("rGuitar");
 
@@ -23,7 +23,7 @@ public class PerformRemoveGuitarAction extends HttpServlet {
                 throwables.printStackTrace();
             }
             req.setAttribute("d24mcx432", action);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("remove-guitar.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("remove-gpu.jsp");
             dispatcher.forward(req, resp);
         } else {
             resp.sendRedirect("error.jsp");

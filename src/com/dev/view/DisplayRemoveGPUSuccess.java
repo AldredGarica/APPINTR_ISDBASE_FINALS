@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/remove-guitar.jsp")
-public class DisplayRemoveGuitarSuccess extends HttpServlet {
+@WebServlet("/remove-gpu.jsp")
+public class DisplayRemoveGPUSuccess extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();

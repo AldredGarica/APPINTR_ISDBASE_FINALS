@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class PerformAddGuitarAction extends HttpServlet {
+public class PerformAddGPUAction extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String gName = req.getParameter("gName");
@@ -25,7 +25,7 @@ public class PerformAddGuitarAction extends HttpServlet {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            resp.sendRedirect("success-guitar.jsp");
+            resp.sendRedirect("success-gpu.jsp");
         } else {
             resp.sendRedirect("error.jsp");
         }

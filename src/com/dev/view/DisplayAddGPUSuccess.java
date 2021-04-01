@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/success-guitar.jsp")
-public class DisplayAddGuitarSuccess extends HttpServlet {
+@WebServlet("/success-gpu.jsp")
+public class DisplayAddGPUSuccess extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
