@@ -21,7 +21,7 @@ public class DatabaseConnModel {
     private String rGuitar;
     //Show Additional Error
     private String rGuitarInfo = "";
-    //Get All Guitars - TEST PUSH
+    //Get All Guitars
     private String gDBAppendedData = "";
 
 
