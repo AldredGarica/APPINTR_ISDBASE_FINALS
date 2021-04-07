@@ -14,12 +14,14 @@ public class PerformAddGuitarAction extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String gName = req.getParameter("gName");
         String gPrice = req.getParameter("gPrice");
+        String gPicture = req.getParameter("gPicture");
 
         if (gPrice != null && gName != null) {
             DatabaseConnModel action = new DatabaseConnModel();
 
             action.setgNamex(gName);
             action.setgPrice(gPrice);
+            action.setgPicture(gPicture);
             try {
                 action.SQLConn(1,true);
             } catch (SQLException throwables) {

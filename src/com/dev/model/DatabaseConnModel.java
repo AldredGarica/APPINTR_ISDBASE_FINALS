@@ -17,6 +17,7 @@ public class DatabaseConnModel {
     //Add Guitar
     private String gName;
     private String gPrice;
+    private String gPicture;
     //Remove Guitar
     private String rGuitar;
     //Show Additional Error
@@ -47,6 +48,7 @@ public class DatabaseConnModel {
     public void setgPrice(String gPrice) {
         this.gPrice = gPrice;
     }
+    public void setgPicture(String gPicture) { this.gPicture = gPicture; }
     public void setrGuitar(String rGuitar) {
         this.rGuitar = rGuitar;
     }
@@ -74,7 +76,7 @@ public class DatabaseConnModel {
 
         switch (Query) {
             case 1:
-                setSQLString("INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)");
+                setSQLString("INSERT INTO finals.guitars (gName, gPrice, gPicture) VALUES (?, ?, ?)");
                 break;
             case 2:
                 setSQLString("SELECT * FROM finals.guitars");
@@ -127,9 +129,10 @@ public class DatabaseConnModel {
                     }
                     break;
                 }
-                case "INSERT INTO finals.guitars (gName, gPrice) VALUES (?, ?)": {
+                case "INSERT INTO finals.guitars (gName, gPrice, gPicture) VALUES (?, ?, ?)": {
                     stmt.setString(1, gName);
                     stmt.setString(2, gPrice);
+                    stmt.setString(3, gPicture);
                     int result = stmt.executeUpdate();
                     System.out.println();
                     if (result > 0) {
@@ -159,8 +162,9 @@ public class DatabaseConnModel {
                         String gPM = result.getString("id");
                         String gName = result.getString("gName");
                         String gPrice = result.getString("gPrice");
+                        String gPicture = result.getString("gPicture");
                         System.out.println();
-                        builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td></tr>");
+                        builder.append("<tr><td>").append(gPM).append("</td><td>").append(gName).append("</td><td>").append(gPrice).append(" PHP").append("</td><td><a href=\"").append(gPicture).append("\"><img src=\"").append(gPicture).append("\" alt=\"i.imgur.com\" style=\"width:48px;height:48px;\"></a>").append("</td></tr>");
                         String AppendedDBGuitars = builder.toString();
                         setgDBAppendedData(AppendedDBGuitars);
                     }

@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Finals" />
-      <artifact name="Finals archive" />
+      <artifact name="MachineApplication:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Fix refactor naming error">
+    <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Add Enter Image Link textbox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/LoginAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformRemoveGuitarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformRemoveGuitarAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
     </list>
@@ -61,6 +58,8 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -75,6 +74,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.37816092" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -84,17 +84,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.4">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mysql-connector-java-8.0.23.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.23.jar" />
       <method v="2" />
@@ -102,9 +91,9 @@
     <configuration name="Tomcat 10.0.4" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.4" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Finals">
+        <artifact name="MachineApplication:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/Finals" />
+            <option name="CONTEXT_PATH" value="/MachineApplication_war_exploded" />
           </settings>
         </artifact>
       </deployment>
@@ -184,6 +173,7 @@
         <option name="BuildArtifacts" enabled="true">
           <artifact name="Finals" />
           <artifact name="Finals archive" />
+          <artifact name="MachineApplication:war exploded" />
         </option>
       </method>
     </configuration>
@@ -221,6 +211,10 @@
       <workItem from="1616315249852" duration="2840000" />
       <workItem from="1616343548013" duration="337000" />
       <workItem from="1616345723715" duration="3537000" />
+      <workItem from="1617623897602" duration="244000" />
+      <workItem from="1617624146678" duration="4868000" />
+      <workItem from="1617765212991" duration="1898000" />
+      <workItem from="1617812315059" duration="4169000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Push">
       <created>1615954418750</created>
@@ -397,7 +391,28 @@
       <option name="project" value="LOCAL" />
       <updated>1616348277226</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="TEST PUSH FROM ALDRED">
+      <created>1617623956265</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1617623956265</updated>
+    </task>
+    <task id="LOCAL-00027" summary="TEST PUSH FROM ALDRED">
+      <created>1617624191260</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617624191260</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add Enter Image Link textbox">
+      <created>1617634297855</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617634297855</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,8 +446,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PerformDatabaseModel Initiate Connection to Database" />
-    <MESSAGE value="Display.java Remove Field Validation" />
     <MESSAGE value="Add .gitignore" />
     <MESSAGE value="Renamed Model to LoginModel" />
     <MESSAGE value="Renamed Action to LoginAction" />
@@ -456,6 +469,8 @@
     <MESSAGE value="DatabaseConnModel: Code Optimization" />
     <MESSAGE value="DatabaseConnModel: Code Optimization pt2" />
     <MESSAGE value="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes." />
-    <option name="LAST_COMMIT_MESSAGE" value="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes." />
+    <MESSAGE value="TEST PUSH FROM ALDRED" />
+    <MESSAGE value="Add Enter Image Link textbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Enter Image Link textbox" />
   </component>
 </project>
