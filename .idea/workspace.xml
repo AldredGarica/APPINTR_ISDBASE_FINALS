@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e57a26e4-24a0-472a-9cce-8c13fde3943c" name="Default Changelist" comment="Add Enter Image Link textbox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/controller/PerformAddGuitarAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/model/DatabaseConnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dev/view/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dev/view/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +26,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -412,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617634297855</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Display: Add Guitar Image to table.">
+      <created>1617822013317</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617822013317</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +449,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add .gitignore" />
     <MESSAGE value="Renamed Model to LoginModel" />
     <MESSAGE value="Renamed Action to LoginAction" />
     <MESSAGE value="Renamed Action to LoginAction pt2" />
@@ -471,6 +473,7 @@
     <MESSAGE value="DatabaseConnModel: PerformRemoveGuitarAction: Remove unused codes." />
     <MESSAGE value="TEST PUSH FROM ALDRED" />
     <MESSAGE value="Add Enter Image Link textbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Enter Image Link textbox" />
+    <MESSAGE value="Display: Add Guitar Image to table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Display: Add Guitar Image to table." />
   </component>
 </project>
