@@ -15,6 +15,7 @@ local.properties
 .loadpath
 .recommenders
 .idea/workspace.xml
+/.idea/workspace.xml
 
 # External tool builders
 .externalToolBuilders/
