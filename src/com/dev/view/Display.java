@@ -32,6 +32,7 @@ public class Display extends HttpServlet {
                     "    <th>ID</th>"+
                     "    <th>Guitar Name</th>"+
                     "    <th>Guitar Price</th>" +
+                    "    <th>Guitar Image</th>" +
                     "  </tr>"+
                     action.getgDBAppendedData()
                     +"<b><a href=\"javascript:location.reload(true)\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click Here to Refresh Guitar Database</a></b>"+
