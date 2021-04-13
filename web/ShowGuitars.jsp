@@ -43,7 +43,7 @@
 
 <ul>
     <li><a class="active" href="ShowGuitars.jsp">Home</a></li>
-    <li><a href="contact-us.jsp">Contact</a></li>
+    <li><a href="contact-us.jsp">Contact Us</a></li>
     <li><a href="about-us.jsp">About</a></li>
     <li><a href="index.jsp">Admin Login</a></li>
 
@@ -95,6 +95,7 @@
             "            "+
             "        </form>"+
             ""+
+            "<p>For inquiries/Orders kindly click the Contact us</p>"+
             "                    "+"<style>\n" +
             "table, th, td {\n" +
             "  border: 1px solid black;\n" +
